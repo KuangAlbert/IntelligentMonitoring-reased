@@ -1,4 +1,15 @@
-# 打工助手使用说明
+# 源码路径  
+https://github.com/KuangAlbert/IntelligentMonitoring
+
+# 界面展示  
+ 软件图标：  
+  ![img]( https://raw.githubusercontent.com/KuangAlbert/IntelligentMonitoring/master/favicon.ico)  
+ 炫酷黑主题：  
+   ![img](https://github.com/KuangAlbert/IntelligentMonitoring/blob/master/ReadmeImage/%E7%82%AB%E9%85%B7%E9%BB%91%E4%B8%BB%E9%A2%98.jpg)  
+星空灰主题：  
+![img]( https://github.com/KuangAlbert/IntelligentMonitoring/blob/master/ReadmeImage/%E6%98%9F%E7%A9%BA%E7%81%B0%E4%B8%BB%E9%A2%98.jpg)
+
+# 考勤助手使用说明
 打包好的exe路径如下：  
 下载最新版本文件夹下的Monitoring.7z，解压后运行Monitoring.exe即可
  ![img](https://github.com/KuangAlbert/IntelligentMonitoring-reased/blob/master/img/Snipaste_2020-01-10_10-52-53.jpg)
@@ -13,6 +24,7 @@ http://chromedriver.storage.googleapis.com/index.html
 3. 查看谷歌浏览器版本的方法是  
 ![img](https://github.com/KuangAlbert/IntelligentMonitoring/blob/master/ReadmeImage/Snipaste_2020-01-08_18-44-52.jpg)  
 ![img](https://github.com/KuangAlbert/IntelligentMonitoring/blob/master/ReadmeImage/Snipaste_2020-01-08_18-45-03.jpg) 
+4. Monitoring.exe必须和Chromedriver.exe在同一目录，否则需要把Chromedriver.exe目录添加到Windows的环境变量中  
 
 # 功能说明
 1、实时爬取最近三天（昨天、前天、大前天）的考勤数据，包括上班时间、下班时间、加班时间；  
@@ -47,7 +59,7 @@ http://chromedriver.storage.googleapis.com/index.html
 - pyqt5-tools
 - selenium
 - pandas
-
+- qdarkstyle
 
 IDE开发环境：Pycharm201902  
 Python版本:3.8.1
@@ -59,9 +71,11 @@ Python版本:3.8.1
 ---|---|---
 20200108 | V1.0 | 实现了基本功能和界面
 20200110 | V2.0 | 1、修复了一些bug<br>2、增加了消息提示输出<br>3、设置窗口为固定大小
+20200111 | V3.0 | 1、实现自动更新开关、自动更新频率、皮肤设置的保存<br>2、增加“查看更新“按钮，按钮直接链接到本版本库，方便用户获取最新版本<br>3、调整控件位置，使更符合审美<br>4、增加主题设置，内置星空灰、炫酷黑两款主题，可以自由切换<br>5、”自动更新频率“窗口只能输入2-9999的整形数<br>6、实现无边框，使窗口看起来更炫酷<br>7、本软件由”打工助手“改为”考勤助手“<br>8、增加软件图标，包括任务栏图标
+
 
 # 已知问题
 1. 当没有爬取结束时，关闭打工助手会导致后台有残留ChromeDirver进程，预计下一版本通过增加关闭按钮，来回调一个函数关闭打开的ChromeDriver进程
 2. 用pyinstaller打包层单个exe文件后，启动非常慢，暂时没有解决办法
-
+3. 在一些win10 64位有打开窗口变小的bug，原因未知
   
